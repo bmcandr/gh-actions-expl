@@ -6,6 +6,8 @@ on:
     paths:
       - src
       - tests
+      - .github/workflows
+  workflow_dispatch:
 jobs:
   flake8-lint:
     runs-on: ubuntu-latest
