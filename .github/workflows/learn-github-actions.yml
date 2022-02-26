@@ -1,14 +1,17 @@
 name: learn-github-actions
 on: [push]
 jobs:
-  check-bats-version:
+  upload-file:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/test
-      - name: download artifact?
-        uses: actions/download-artifact@v2
-        with:
-          name: test-log-file
-      - run: npm install -g bats
-      - run: bats -v
+  # download-file:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: download artifact?
+  #       uses: actions/download-artifact@v2
+  #       with:
+  #         name: test-log-file
+  #       run: |
+  #         cat test.log
