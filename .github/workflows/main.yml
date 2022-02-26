@@ -11,9 +11,11 @@ jobs:
       - name: Set up Conda
         uses: conda-incubator/setup-miniconda@v2
         with:
+          auto-activate-base: false
           activate-environment: pysample-test
           environment-file: ci/environment.yml
           python-version: '3.10'
+          mamba-version: '*'
           channels: conda-forge
       - name: Install pysample
         run: |
@@ -21,5 +23,4 @@ jobs:
           pip install -e .
       - name: Test with pytest
         run: |
-          pip install pytest pytest-cov
           pytest --doctest-modules --junitxml=junit/test-results.xml --cov --cov-report=xml --cov-report=html
