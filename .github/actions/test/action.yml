@@ -3,12 +3,12 @@ description: test
 
 runs:
   steps:
-      - shell: bash
-        name: Echo
-        env:
-          MESSAGE: TEST SUCCESS
-        run: |
-          echo $MESSAGE > test.log
+    - shell: bash
+      name: Echo
+      env:
+        MESSAGE: TEST SUCCESS
+      run: |
+        echo $MESSAGE > test.log
     
     - name: upload
       uses: actions/upload-artifact@v2
