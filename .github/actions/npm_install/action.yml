@@ -1,5 +1,7 @@
-jobs:
-  npm_install:
-    steps:
-      - name: My first step
-        uses: actions/setup-node@v3.0.0
+name: npm_install
+description: installs npm
+
+runs:
+  steps:
+    - name: My first step
+      uses: actions/setup-node@v3.0.0
