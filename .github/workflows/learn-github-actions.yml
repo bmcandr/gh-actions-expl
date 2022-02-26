@@ -4,19 +4,20 @@ on:
     branches:
       - 'main'
 jobs:
-  upload-file:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: ./.github/actions/test
-  download-file:
-    needs: upload-file
-    runs-on: ubuntu-latest
-    steps:
-      - name: download artifact?
-        uses: actions/download-artifact@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
         with:
-          name: test-log-file
-      - name: cat log
+          python-version: '3.10'
+      - name: Install dependencies
         run: |
-          cat test.log
+          python -m pip install --upgrade pip
+          pip install numpy
+      - name: Test with pytest
+        run: |
+          pip install pytest pytest-cov
+          pytest test_sample.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
+        
