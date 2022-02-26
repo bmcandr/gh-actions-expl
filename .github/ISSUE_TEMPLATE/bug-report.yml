@@ -17,6 +17,8 @@ body:
     validations:
       required: true
   - type: textarea
-    label: Log output
-    description: Paste any relevant log outputs here.
-    render: shell
+    id: logs
+    attributes:
+      label: Log output
+      description: Paste any relevant log outputs here.
+      render: shell
