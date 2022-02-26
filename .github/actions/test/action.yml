@@ -9,7 +9,6 @@ runs:
         MESSAGE: TEST SUCCESS
       run: |
         echo $MESSAGE > test.log
-    - name : Upload output file
       uses: actions/upload-artifact@v2
       with:
         name: test-log-file
