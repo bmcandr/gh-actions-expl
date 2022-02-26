@@ -10,6 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/test
   download-file:
+    needs: upload-file
     runs-on: ubuntu-latest
     steps:
       - name: download artifact?
@@ -18,4 +19,4 @@ jobs:
           name: test-log-file
       - name: cat log
         run: |
-              cat test.log
+          cat test.log
