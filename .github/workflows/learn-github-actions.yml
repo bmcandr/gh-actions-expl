@@ -16,5 +16,6 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: test-log-file
+      - name: cat log
         run: |
-          cat test.log
+              cat test.log
