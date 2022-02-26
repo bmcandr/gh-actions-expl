@@ -13,4 +13,4 @@ runs:
       uses: actions/upload-artifact@v2
       with:
         name: test-log-file
-        path test.log
+        path: test.log
