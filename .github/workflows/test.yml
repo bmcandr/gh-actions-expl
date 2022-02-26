@@ -4,9 +4,8 @@ on:
     branches:
       - 'main'
     paths:
-      - src
-      - tests
-      - .github/workflows/*.yml
+      - '**.py'
+      - '.github/workflows/*.yml'
   workflow_dispatch:
 jobs:
   flake8-lint:
