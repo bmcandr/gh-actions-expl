@@ -1,0 +1,10 @@
+name: test 2
+description: tests downloading artifact uploaded in test
+
+runs:
+  download-test:
+    steps:
+      - name: Download a single artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: output-log-file

@@ -2,11 +2,15 @@ name: test
 description: test
 
 runs:
-  using: "composite"
   steps:
     - name : Echo
       shell: bash
       env:
         MESSAGE: TEST SUCCESS
       run: |
-        echo $MESSAGE
+        echo $MESSAGE > test.log
+    - name : Upload output file
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-log-file
+        path test.log
