@@ -22,7 +22,7 @@ jobs:
         uses: py-actions/flake8@v2
   test:
     name: Test
-    needs: lint
+    needs: flake8-lint
     runs-on: ubuntu-latest
     defaults:
       run:
