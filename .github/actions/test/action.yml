@@ -5,6 +5,6 @@ runs:
   using: "composite"
   steps:
     - name : Echo
-    shell: bash
-    run: |
-      echo TEST SUCCESS
+      shell: bash
+      run: |
+        echo TEST SUCCESS
