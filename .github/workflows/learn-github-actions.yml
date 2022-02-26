@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: ./.github/actions/npm_install
+      - uses: ./.github/actions/test
       - run: npm install -g bats
       - run: bats -v
