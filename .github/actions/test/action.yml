@@ -10,8 +10,8 @@ runs:
         MESSAGE: TEST SUCCESS
       run: |
         echo $MESSAGE > test.log
-    # - name: upload
-    #   uses: actions/upload-artifact@v2
-    #   with:
-    #     name: test-log-file
-    #     path: test.log
+    - name: upload
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-log-file
+        path: test.log
