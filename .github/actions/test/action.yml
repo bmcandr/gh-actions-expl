@@ -6,5 +6,7 @@ runs:
   steps:
     - name : Echo
       shell: bash
+      env:
+        MESSAGE: TEST SUCCESS
       run: |
-        echo TEST SUCCESS
+        echo $MESSAGE
