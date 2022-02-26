@@ -3,8 +3,8 @@ description: test
 
 runs:
   steps:
-    - shell: bash
-      name: Echo
+    - name: Echo
+      shell: bash
       env:
         MESSAGE: TEST SUCCESS
       run: |

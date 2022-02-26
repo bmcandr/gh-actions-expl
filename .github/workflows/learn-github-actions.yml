@@ -1,5 +1,8 @@
 name: learn-github-actions
-on: [push]
+on:
+  push:
+    branches:
+      - 'master'
 jobs:
   upload-file:
     runs-on: ubuntu-latest
