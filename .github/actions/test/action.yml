@@ -2,9 +2,9 @@ name: test
 description: test
 
 runs:
+  using: "composite"
   steps:
-    steps:
-      - name : Echo
-      shell: bash
-      run: |
-        echo TEST SUCCESS
+    - name : Echo
+    shell: bash
+    run: |
+      echo TEST SUCCESS
