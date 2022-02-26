@@ -1,0 +1,8 @@
+name: pysample-test
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - pytest-cov
+  - numpy
+  - pytest
