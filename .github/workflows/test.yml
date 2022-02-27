@@ -33,6 +33,7 @@ jobs:
           activate-environment: pysample-test
           environment-file: ci/environment.yml
           python-version: '3.10'
+          mamba-version: '*'
           channels: conda-forge
           auto-activate-base: false
       - name: Install pysample
