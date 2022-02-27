@@ -156,3 +156,4 @@ cython_debug/
 
 .vscode/
 *.egg-info/
+*.un~
