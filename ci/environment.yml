@@ -1,8 +1,17 @@
-name: pysample-test
+name: gh-actions
 channels:
   - conda-forge
-  - nodefaults
+  - defaults
 dependencies:
-  - pytest-cov
   - numpy
+  - flake8
+  - mamba
+  - sphinx
+  - ca-certificates
+  - certifi
+  - openssl
+  - sphinx_rtd_theme
+  - autoflake
+  - blackdoc
+  - pre-commit
   - pytest
