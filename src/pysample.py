@@ -1,6 +1,7 @@
 """
 Pysample - Python library to test GitHub Actions and Sphinx/ReadTheDocs.
 """
+
 import numpy as np
 
 
