@@ -38,7 +38,7 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.autosummary",
     "sphinx.ext.intersphinx",
-    "sphinx.ext.githubpages",
+    # "sphinx.ext.githubpages",
     "sphinx_rtd_theme",
 ]
 
