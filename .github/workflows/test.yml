@@ -3,15 +3,11 @@ on:
   push:
     branches:
       - 'main'
-    paths:
-      - '**.py'
-      - '.github/workflows/*.yml'
   workflow_dispatch:
   pull_request:
 jobs:
   test:
     name: Test
-    needs: flake8-lint
     runs-on: ubuntu-latest
     defaults:
       run:
