@@ -19,6 +19,8 @@ jobs:
           pip install sphinx_rtd_theme
       - name: Build HTML
         uses: ammaraskar/sphinx-action@master
+        with:
+          docs-folder: "docs/"
       - name: Upload artifacts
         uses: actions/upload-artifact@v1
         with:
